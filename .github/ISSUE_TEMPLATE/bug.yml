@@ -1,0 +1,75 @@
+name: 🐛 Bug Report
+description: Segnala un problema o un comportamento inaspettato di LetzyOS.
+title: "[BUG] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Grazie per aver segnalato un bug di LetzyOS! 🦎
+        Compila tutti i campi possibili per aiutarci a capire e risolvere il problema.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Descrizione del bug
+      description: Descrivi chiaramente il problema che hai riscontrato.
+      placeholder: "Descrivi cosa è successo..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: command
+    attributes:
+      label: Comando utilizzato
+      description: Inserisci il comando che ha causato il problema.
+      placeholder: |
+        write test.txt Hello
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportamento atteso
+      description: Cosa ti aspettavi che facesse LetzyOS?
+      placeholder: "Mi aspettavo che..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Comportamento attuale
+      description: Cosa è successo realmente?
+      placeholder: "LetzyOS invece..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: error
+    attributes:
+      label: Messaggio di errore
+      description: Se compare un errore, incollalo qui.
+      placeholder: |
+        Inserisci qui il messaggio di errore...
+      render: text
+
+  - type: input
+    id: version
+    attributes:
+      label: Versione di LetzyOS
+      description: Indica la versione che stai utilizzando.
+      placeholder: "es. 1.0.0"
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Informazioni aggiuntive
+      description: Aggiungi eventuali dettagli, screenshot o informazioni utili.
+      placeholder: "Altre informazioni..."
+    validations:
+      required: false
