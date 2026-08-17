@@ -1,0 +1,81 @@
+name: "💥 Crash Report"
+description: "Segnala un crash o una chiusura improvvisa di LetzyOS."
+title: "[CRASH] "
+labels:
+  - crash
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Grazie per aver segnalato un crash di LetzyOS! 🦎
+        Inserisci più informazioni possibili per aiutarci a trovare la causa.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Descrizione del crash
+      description: Descrivi cosa è successo.
+      placeholder: "LetzyOS è andato in crash quando..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Come riprodurre il crash
+      description: Indica i passaggi necessari per riprodurre il crash.
+      placeholder: |
+        1. Avvia LetzyOS
+        2. Esegui il comando...
+        3. LetzyOS va in crash
+    validations:
+      required: true
+
+  - type: textarea
+    id: command
+    attributes:
+      label: Comando utilizzato
+      description: Inserisci il comando che ha causato il crash, se applicabile.
+      placeholder: |
+        stamp test.txt
+    validations:
+      required: false
+
+  - type: textarea
+    id: error
+    attributes:
+      label: Errore o traceback
+      description: Incolla l'errore o il traceback mostrato prima del crash.
+      placeholder: |
+        Inserisci qui l'errore...
+      render: text
+    validations:
+      required: false
+
+  - type: input
+    id: version
+    attributes:
+      label: Versione di LetzyOS
+      description: Indica la versione utilizzata.
+      placeholder: "es. 1.0.0"
+    validations:
+      required: true
+
+  - type: input
+    id: os
+    attributes:
+      label: Sistema operativo
+      description: Indica il sistema operativo utilizzato.
+      placeholder: "es. Windows 11"
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Informazioni aggiuntive
+      description: Inserisci eventuali informazioni aggiuntive.
+      placeholder: "Altri dettagli..."
+    validations:
+      required: false
