@@ -1,0 +1,41 @@
+name: Build LetzyOS Release
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install PyInstaller
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyinstaller
+
+      - name: Build LetzyOS
+        run: |
+          pyinstaller main.py --name="letzyos"
+
+      - name: Create tar.gz archive
+        run: |
+          tar -czf letzyos_linux.tar.gz -C dist letzyos
+
+      - name: Upload archive to release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: letzyos_linux.tar.gz
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
