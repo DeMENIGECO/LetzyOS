@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Utilità per percorsi - LetzyOS</title>
+
+    <style>
+        :root {
+            --bg: #0b0f0d;
+            --card: #121814;
+            --card-hover: #172019;
+            --border: #26352b;
+            --text: #e8f5eb;
+            --muted: #9aaa9f;
+            --green: #45d483;
+            --green-dark: #2aaa65;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            background: var(--bg);
+            color: var(--text);
+            font-family: Arial, sans-serif;
+            line-height: 1.7;
+        }
+
+        body > * {
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Navbar */
+
+        body > p:first-of-type {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 35px;
+            padding: 12px 16px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+        }
+
+        body > p:first-of-type img {
+            border-radius: 10px;
+        }
+
+        a {
+            color: var(--green);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid var(--border);
+            margin-bottom: 40px;
+        }
+
+        /* Titoli */
+
+        h1 {
+            font-size: 42px;
+            margin-bottom: 30px;
+            letter-spacing: -1px;
+        }
+
+        h2 {
+            margin: 0 0 10px;
+            padding: 22px 22px 0;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-bottom: 0;
+            border-radius: 14px 14px 0 0;
+            color: var(--green);
+            font-size: 21px;
+        }
+
+        /* Descrizioni */
+
+        h2 + p {
+            margin: 0 0 22px;
+            padding: 0 22px 22px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-top: 0;
+            border-radius: 0 0 14px 14px;
+            color: var(--muted);
+        }
+
+        /* Comandi */
+
+        code {
+            padding: 4px 8px;
+            background: #080c09;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--green);
+            font-family: Consolas, monospace;
+        }
+
+        pre {
+            margin: -10px 22px 22px;
+            padding: 14px;
+            overflow-x: auto;
+            background: #080c09;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--green);
+        }
+
+        pre code {
+            padding: 0;
+            border: 0;
+            background: none;
+        }
+
+        /* Navigazione */
+
+        body > ul {
+            display: flex;
+            gap: 12px;
+            padding: 0;
+            margin-top: 45px;
+            list-style: none;
+        }
+
+        body > ul li {
+            flex: 1;
+            margin: 0;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            transition: 0.2s;
+        }
+
+        body > ul li:hover {
+            background: var(--card-hover);
+            border-color: var(--green);
+            transform: translateY(-2px);
+        }
+
+        body > ul li a {
+            display: block;
+            padding: 16px;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 600px) {
+            body {
+                padding: 25px 15px;
+            }
+
+            body > p:first-of-type {
+                flex-wrap: wrap;
+            }
+
+            h1 {
+                font-size: 34px;
+            }
+
+            body > ul {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<p>
+    <img src="../logo.png" alt="LetzyOS Logo" width="50" height="50">
+    <b>LetzyOS</b> -
+    <a href="../download.html">Download</a> -
+    <a href="./">Documentazione</a>
+</p>
+
+<hr>
+
+<h1>Utilità per percorsi</h1>
+
+<h2>Ls: visualizzare il contenuto di una directory</h2>
+
+<p>
+    Il comando <code>ls</code> viene utilizzato per visualizzare
+    i file presenti nella directory corrente.
+</p>
+
+<pre><code>ls</code></pre>
+
+<h2>Make: creare un file</h2>
+
+<p>
+    Il comando <code>make</code> viene utilizzato per creare
+    un nuovo file. Devi specificare il nome del file.
+</p>
+
+<pre><code>make esempio.txt</code></pre>
+
+<h2>Write: scrivere su un file</h2>
+
+<p>
+    Il comando <code>write</code> permette di scrivere del contenuto
+    all'interno di un file esistente.
+</p>
+
+<pre><code>write esempio.txt Ciao LetzyOS!</code></pre>
+
+<h2>Delete: eliminare un file</h2>
+
+<p>
+    Il comando <code>delete</code> viene utilizzato per eliminare
+    un file esistente. Devi specificare il nome del file.
+</p>
+
+<pre><code>delete esempio.txt</code></pre>
+
+<h2>Stamp: visualizzare il contenuto di un file</h2>
+
+<p>
+    Il comando <code>stamp</code> permette di visualizzare
+    il contenuto di un file.
+</p>
+
+<pre><code>stamp esempio.txt</code></pre>
+
+<ul>
+    <li>
+        <a href="base.html">
+            ⬅️ Pagina precedente: Comandi di base
+        </a>
+    </li>
+</ul>
+
+</body>
+</html>

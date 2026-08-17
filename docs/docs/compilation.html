@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Compilazione - LetzyOS</title>
+
+    <style>
+        :root {
+            --bg: #0b0f0d;
+            --card: #121814;
+            --card-hover: #172019;
+            --border: #26352b;
+            --text: #e8f5eb;
+            --muted: #9aaa9f;
+            --green: #45d483;
+            --green-dark: #2aaa65;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            background: var(--bg);
+            color: var(--text);
+            font-family: Arial, sans-serif;
+            line-height: 1.7;
+        }
+
+        body > * {
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Navbar */
+
+        body > p:first-of-type {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 35px;
+            padding: 12px 16px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+        }
+
+        body > p:first-of-type img {
+            border-radius: 10px;
+        }
+
+        a {
+            color: var(--green);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid var(--border);
+            margin-bottom: 40px;
+        }
+
+        /* Titoli */
+
+        h1 {
+            font-size: 42px;
+            margin-bottom: 30px;
+            letter-spacing: -1px;
+        }
+
+        h2 {
+            font-size: 25px;
+            margin-top: 35px;
+            color: var(--green);
+        }
+
+        h3 {
+            margin-top: 0;
+        }
+
+        p {
+            color: var(--muted);
+            font-size: 17px;
+        }
+
+        /* Nota */
+
+        blockquote {
+            margin: 25px 0;
+            padding: 18px 22px;
+            background: var(--card);
+            border-left: 4px solid var(--green);
+            border-radius: 10px;
+        }
+
+        blockquote p {
+            margin-bottom: 0;
+        }
+
+        /* Requisiti */
+
+        ul {
+            color: var(--muted);
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        /* Codice */
+
+        code {
+            display: block;
+            margin: 15px 0;
+            padding: 16px 18px;
+            overflow-x: auto;
+            background: #080c09;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            color: var(--green);
+            font-family: Consolas, monospace;
+            font-size: 14px;
+        }
+
+        /* Navigazione */
+
+        body > ul:last-child {
+            display: flex;
+            gap: 12px;
+            padding: 0;
+            margin-top: 45px;
+            list-style: none;
+        }
+
+        body > ul:last-child li {
+            flex: 1;
+            margin: 0;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            transition: 0.2s;
+        }
+
+        body > ul:last-child li:hover {
+            background: var(--card-hover);
+            border-color: var(--green);
+            transform: translateY(-2px);
+        }
+
+        body > ul:last-child li a {
+            display: block;
+            padding: 16px;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 600px) {
+            body {
+                padding: 25px 15px;
+            }
+
+            body > p:first-of-type {
+                flex-wrap: wrap;
+            }
+
+            h1 {
+                font-size: 34px;
+            }
+
+            body > ul:last-child {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<p>
+    <img src="../logo.png" alt="LetzyOS Logo" width="50" height="50">
+    <b>LetzyOS</b> -
+    <a href="../download.html">Download</a> -
+    <a href="./">Documentazione</a>
+</p>
+
+<hr>
+
+<h1>Compilazione</h1>
+
+<blockquote>
+    <h3>📝 Nota</h3>
+    <p>
+        Se vuoi semplicemente iniziare a usare LetzyOS,
+        puoi saltare questa pagina.
+    </p>
+</blockquote>
+
+<h2>Requisiti</h2>
+
+<p>
+    Per poter compilare LetzyOS, è necessario avere installato
+    sul proprio sistema i seguenti strumenti:
+</p>
+
+<ul>
+    <li>Python 3.9 o superiore</li>
+    <li>pip</li>
+    <li>Codice sorgente di LetzyOS scaricato</li>
+</ul>
+
+<h2>Installazione delle dipendenze</h2>
+
+<p>
+    Per compilare LetzyOS, installa le dipendenze necessarie
+    utilizzando pip:
+</p>
+
+<code>pip install pyinstaller colorama</code>
+
+<h2>Compilazione del sistema operativo</h2>
+
+<p>
+    Una volta installate le dipendenze, puoi procedere
+    con la compilazione di LetzyOS:
+</p>
+
+<code>pyinstaller main.py --name="letzyos"</code>
+
+<ul>
+    <li>
+        <a href="installation.html">
+            ⬅️ Pagina precedente: installazione
+        </a>
+    </li>
+
+    <li>
+        <a href="commands.html">
+            Prossima pagina: introduzione ai comandi ➡️
+        </a>
+    </li>
+</ul>
+
+</body>
+</html>

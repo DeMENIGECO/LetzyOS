@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Documentazione - LetzyOS</title>
+
+    <style>
+        :root {
+            --bg: #0b0f0d;
+            --card: #121814;
+            --card-hover: #172019;
+            --border: #26352b;
+            --text: #e8f5eb;
+            --muted: #9aaa9f;
+            --green: #45d483;
+            --green-dark: #2aaa65;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            background: var(--bg);
+            color: var(--text);
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        body > * {
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Navbar */
+
+        body > p:first-of-type {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 35px;
+            padding: 12px 16px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+        }
+
+        body > p:first-of-type img {
+            border-radius: 10px;
+        }
+
+        a {
+            color: var(--green);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            max-width: 900px;
+            border: 0;
+            border-top: 1px solid var(--border);
+            margin-bottom: 40px;
+        }
+
+        /* Titoli */
+
+        h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            margin-top: 35px;
+            font-size: 24px;
+        }
+
+        /* Sezioni */
+
+        ul {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            padding: 0;
+            list-style: none;
+        }
+
+        li {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            transition: 0.2s;
+        }
+
+        li:hover {
+            background: var(--card-hover);
+            border-color: var(--green);
+            transform: translateY(-2px);
+        }
+
+        li a {
+            display: block;
+            padding: 16px 18px;
+        }
+
+        /* Navigazione */
+
+        body > ul:last-child {
+            display: block;
+            margin-top: 40px;
+            padding: 0;
+        }
+
+        body > ul:last-child li {
+            border-color: var(--green);
+        }
+
+        /* Mobile */
+
+        @media (max-width: 600px) {
+            body {
+                padding: 25px 15px;
+            }
+
+            body > p:first-of-type {
+                flex-wrap: wrap;
+            }
+
+            h1 {
+                font-size: 34px;
+            }
+
+            ul {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<p>
+    <img src="../logo.png" alt="LetzyOS Logo" width="50" height="50">
+    <b>LetzyOS</b> -
+    <a href="../download.html">Download</a> -
+    <a href="./">Documentazione</a>
+</p>
+
+<hr>
+
+<h1>📚 Indice della documentazione</h1>
+
+<p>
+    Tutta la documentazione di LetzyOS, dalla configurazione
+    ai comandi disponibili.
+</p>
+
+<h2>Introduzione</h2>
+
+<ul>
+    <li>
+        <a href="introduction.html">📖 Introduzione</a>
+    </li>
+
+    <li>
+        <a href="installation.html">⚙️ Installazione</a>
+    </li>
+
+    <li>
+        <a href="compilation.html">🔨 Compilazione</a>
+    </li>
+</ul>
+
+<h2>Comandi</h2>
+
+<ul>
+    <li>
+        <a href="commands.html">💻 Introduzione ai comandi</a>
+    </li>
+
+    <li>
+        <a href="base.html">⌨️ Comandi di base</a>
+    </li>
+
+    <li>
+        <a href="path.html">📁 Utilità per percorsi</a>
+    </li>
+</ul>
+
+<ul>
+    <li>
+        <a href="introduction.html">
+            Prossima pagina: Introduzione ➡️
+        </a>
+    </li>
+</ul>
+
+</body>
+</html>

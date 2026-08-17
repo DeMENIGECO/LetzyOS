@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LetzyOS</title>
+
+    <style>
+        :root {
+            --bg: #0b0f0d;
+            --card: #121814;
+            --border: #26352b;
+            --text: #e8f5eb;
+            --muted: #9aaa9f;
+            --green: #45d483;
+            --green-dark: #2aaa65;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            background: var(--bg);
+            color: var(--text);
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        body > * {
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Navbar */
+
+        body > p:first-of-type {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 35px;
+            padding: 12px 16px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+        }
+
+        body > p:first-of-type img {
+            border-radius: 10px;
+        }
+
+        a {
+            color: var(--green);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            max-width: 900px;
+            border: 0;
+            border-top: 1px solid var(--border);
+            margin-bottom: 45px;
+        }
+
+        /* Hero */
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+
+        body > b {
+            display: block;
+            max-width: 700px;
+            color: var(--muted);
+            font-size: 18px;
+        }
+
+        /* Button */
+
+        button {
+            border: 0;
+            border-radius: 10px;
+            padding: 13px 22px;
+            background: var(--green);
+            color: #06100a;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        button:hover {
+            background: var(--green-dark);
+            transform: translateY(-2px);
+        }
+
+        /* Features */
+
+        ul {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            padding: 0;
+            list-style: none;
+            margin-top: 35px;
+        }
+
+        li {
+            padding: 22px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            transition: 0.2s;
+        }
+
+        li:hover {
+            border-color: var(--green);
+            transform: translateY(-3px);
+        }
+
+        li b {
+            display: block;
+            color: var(--green);
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        li p {
+            margin: 0;
+            color: var(--muted);
+        }
+
+        code {
+            padding: 3px 7px;
+            border-radius: 6px;
+            background: #080c09;
+            color: var(--green);
+            font-family: monospace;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 600px) {
+            body {
+                padding: 25px 15px;
+            }
+
+            body > p:first-of-type {
+                flex-wrap: wrap;
+            }
+
+            h1 {
+                font-size: 38px;
+            }
+
+            ul {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<p>
+    <img src="logo.png" alt="LetzyOS Logo" width="50" height="50">
+    <b>LetzyOS</b> -
+    <a href="download.html">Download</a> -
+    <a href="docs/">Documentazione</a>
+</p>
+
+<hr>
+
+<h1>LetzyOS</h1>
+
+<b>
+    LetzyOS è un sistema operativo che funziona da terminale,
+    leggero, open source e scritto in Python.
+</b>
+
+<br><br>
+
+<b>
+    <button onclick="window.location.href='download.html'">
+        Scarica ora
+    </button>
+</b>
+
+<br>
+
+<ul>
+
+    <li>
+        <b>Semplice</b>
+        <p>
+            Scritto in Python, LetzyOS è facile da usare e da personalizzare.
+        </p>
+    </li>
+
+    <li>
+        <b>Leggero</b>
+        <p>
+            LetzyOS è progettato per essere leggero e veloce,
+            ideale per computer con risorse limitate.
+        </p>
+    </li>
+
+    <li>
+        <b>Open Source</b>
+        <p>
+            LetzyOS è un software open source, il che significa
+            che chiunque può consultare, modificare e distribuire
+            il codice sorgente.
+        </p>
+    </li>
+
+    <li>
+        <b>Intuitivo</b>
+        <p>
+            Scrivi comandi che sembrano semplici parole inglesi
+            come <code>exit</code>, <code>write</code> e <code>delete</code>.
+        </p>
+    </li>
+
+</ul>
+
+</body>
+</html>

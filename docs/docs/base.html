@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Comandi di base - LetzyOS</title>
+
+    <style>
+        :root {
+            --bg: #0b0f0d;
+            --card: #121814;
+            --card-hover: #172019;
+            --border: #26352b;
+            --text: #e8f5eb;
+            --muted: #9aaa9f;
+            --green: #45d483;
+            --green-dark: #2aaa65;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            background: var(--bg);
+            color: var(--text);
+            font-family: Arial, sans-serif;
+            line-height: 1.7;
+        }
+
+        body > * {
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Navbar */
+
+        body > p:first-of-type {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 35px;
+            padding: 12px 16px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+        }
+
+        body > p:first-of-type img {
+            border-radius: 10px;
+        }
+
+        a {
+            color: var(--green);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid var(--border);
+            margin-bottom: 40px;
+        }
+
+        /* Titoli */
+
+        h1 {
+            font-size: 42px;
+            margin-bottom: 30px;
+            letter-spacing: -1px;
+        }
+
+        h2 {
+            margin: 0 0 10px;
+            font-size: 22px;
+            color: var(--green);
+        }
+
+        /* Comandi */
+
+        body > h2 {
+            margin-top: 22px;
+            padding: 22px 22px 0;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-bottom: 0;
+            border-radius: 14px 14px 0 0;
+        }
+
+        body > h2 + p {
+            margin: 0;
+            padding: 0 22px 22px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-top: 0;
+            border-radius: 0 0 14px 14px;
+            color: var(--muted);
+        }
+
+        code {
+            padding: 4px 8px;
+            background: #080c09;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--green);
+            font-family: Consolas, monospace;
+        }
+
+        /* Navigazione */
+
+        body > ul {
+            display: flex;
+            gap: 12px;
+            padding: 0;
+            margin-top: 45px;
+            list-style: none;
+        }
+
+        body > ul li {
+            flex: 1;
+            margin: 0;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            transition: 0.2s;
+        }
+
+        body > ul li:hover {
+            background: var(--card-hover);
+            border-color: var(--green);
+            transform: translateY(-2px);
+        }
+
+        body > ul li a {
+            display: block;
+            padding: 16px;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 600px) {
+            body {
+                padding: 25px 15px;
+            }
+
+            body > p:first-of-type {
+                flex-wrap: wrap;
+            }
+
+            h1 {
+                font-size: 34px;
+            }
+
+            body > ul {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<p>
+    <img src="../logo.png" alt="LetzyOS Logo" width="50" height="50">
+    <b>LetzyOS</b> -
+    <a href="../download.html">Download</a> -
+    <a href="./">Documentazione</a>
+</p>
+
+<hr>
+
+<h1>Comandi di base</h1>
+
+<h2>Echo: lavorare con l'output</h2>
+
+<p>
+    Il comando <code>echo</code> viene utilizzato per visualizzare
+    un messaggio sul terminale.
+    Ad esempio, digitando <code>echo Ciao, mondo!</code>
+    verrà visualizzato il messaggio sul terminale.
+</p>
+
+<h2>Help: ottenere informazioni sui comandi</h2>
+
+<p>
+    Il comando <code>help</code> mostra la lista dei comandi
+    disponibili in LetzyOS, insieme a una breve descrizione.
+</p>
+
+<h2>Exit: uscire dal sistema</h2>
+
+<p>
+    Il comando <code>exit</code> viene utilizzato per uscire
+    da LetzyOS. Il comando chiude la sessione corrente e
+    restituisce il controllo al sistema operativo sottostante.
+</p>
+
+<ul>
+    <li>
+        <a href="commands.html">
+            ⬅️ Pagina precedente: introduzione ai comandi
+        </a>
+    </li>
+
+    <li>
+        <a href="path.html">
+            Prossima pagina: utilità per percorsi ➡️
+        </a>
+    </li>
+</ul>
+
+</body>
+</html>
