@@ -1,6 +1,7 @@
 """Import file"""
 from vars import *
 from commands import handle_command
+from start import on
 
 """Messaggio di benvenuto"""
 def welcome_message():
@@ -22,4 +23,5 @@ def main():
 
 """Esecuzione del programma"""
 if __name__ == "__main__":
+    on()
     main()
