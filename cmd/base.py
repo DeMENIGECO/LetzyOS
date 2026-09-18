@@ -1,4 +1,9 @@
 """Comandi base per Letzy OS."""
+
+import os
+import time
+import sys
+
 def echo(text):
     """Stampa il testo inserito dall'utente."""
     print(text)
@@ -17,5 +22,23 @@ def help():
 
 def exit():
     """Esce dal programma."""
-    print("Uscita dal programma...")
-    quit()
+    os.system("clear") 
+    print("Disconnessione da 'user'...")
+    time.sleep(0.5)
+    print("Chiudendo /letzy/core/cmd...")
+    print("Chiudendo CmdTermRecognize...")
+    time.sleep(2)
+    print("Chiudendo CmdRunCommands...")
+    time.sleep(0.7)
+    print("Smontando filesystem: /letzy/*...")
+    time.sleep(3)
+    print("Chiudendo SigtermServiceMSG...")
+    print("Chiudendo SigtermServiceLand...")
+    print("Smontando filesystem: :/network/*...")
+    time.sleep(1)
+    print("Chiudendo LetzyUserInterface...")
+    print("Chiudendo LTemp...")
+    print("Smontando filesystem :/tmp/*")
+    print("\nChiusura completata.")
+    
+    sys.exit(0)
