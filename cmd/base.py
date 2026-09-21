@@ -22,7 +22,7 @@ def help():
 
 def exit():
     """Esce dal programma."""
-    os.system("clear") 
+    os.system("clear" if os.name == "posix" else "cls") 
     print("Disconnessione da 'user'...")
     time.sleep(0.5)
     print("Chiudendo /letzy/core/cmd...")
@@ -40,5 +40,6 @@ def exit():
     print("Chiudendo LTemp...")
     print("Smontando filesystem :/tmp/*")
     print("\nChiusura completata.")
-    
+
+    os.system("clear" if os.name == "posix" else "cls")
     sys.exit(0)
