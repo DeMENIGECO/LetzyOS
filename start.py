@@ -1,16 +1,17 @@
 """Avvia LetzyOS"""
 
 import os
+import time
 
 def on():
-    """Esce dal programma."""
-    os.system("clear")
+    """Accende LetzyOS"""
+    os.system("clear" if os.name == "posix" else "cls")
     print("Montando filesystem :/tmp/*")
     print("Aprendo LTemp...")
     print("Aprendo LetzyUserInterface...")
     time.sleep(1)
     print("Aprendo SigtermServiceLand...")
-    print("Smontando filesystem: :/network/*...")
+    print("Montando filesystem: :/network/*...")
     print("Aprendo SigtermServiceMSG...")
     time.sleep(3)
     print("Montando filesystem: /letzy/*...")
@@ -22,7 +23,7 @@ def on():
     print("Connessione come 'user'...")
     time.sleep(0.5)
     
-    os.system("clear")
+    os.system("clear" if os.name == "posix" else "cls")
     
     
     
